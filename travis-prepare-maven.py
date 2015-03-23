@@ -45,8 +45,8 @@ ooServerUser = m2.createElement("username")
 ooServerPass = m2.createElement("password")
 
 idNode = m2.createTextNode("otavanopisto-releases")
-userNode = m2.createTextNode(os.environ["OOSNAP_USERNAME"])
-passNode = m2.createTextNode(os.environ["OOSNAP_PASSWORD"])
+userNode = m2.createTextNode(os.environ["OOREL_USERNAME"])
+passNode = m2.createTextNode(os.environ["OOREL_PASSWORD"])
 
 ooServerId.appendChild(idNode)
 ooServerUser.appendChild(userNode)

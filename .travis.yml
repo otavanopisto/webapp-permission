@@ -11,5 +11,7 @@ after_success:
 - mvn deploy --settings ~/.m2/mySettings.xml
 env:
   global:
-  - secure: CNoQ1q1Nx7XVL9vcAfHCiKfCDZwIA3sZ1oxu05al3//uMQt3/3Jb7sTMDRg5L/LJozKLPug+1IHFxpER4dNJPZ1pvjY/Ft8tmrzQlHh7rLLP64fCRMeVoykp89gpnBMmIPAf3iYqS96CYdZB7FB3XKOq/5Xjzz//DRo/LWKLfYQ=
-  - secure: gz9RTdfodkL/xfdUV5qqonT4BdW+eFHgUWWjz0Zxtr5jdCAtrJapsF4s6qyYzu5MxpXJCcpkRCjNYyKCf2H+pATNQ9I/aeKKB7H9uM+8sGc0v6Ax7ZMO9aWxKEx7Ldrea1tSLjHgB1nkrQjFTp390pRhEUqYVnMKpYFoVPH0KiQ=
+  - secure: Ev58jgNyaZxmUO6FOsVEeom/2Fbn66dzTyXi7ZgM2OK7CYuQYMYX8MRplWkZfRQ+AaG9CHiDhkX4STxyyLlqfHsXFmKnL+CFjDnUWzTq9wanc3cJJhMKVKofXORoN+DAS+mnzRbVuI7j9IO8lrh7xgwVMNGfLJ1b/M8pSUC/DDQ=
+  - secure: Am1nQHXJfxd21VxFiAfUSI85fJUWNtnnXh6ZxZSJkR0huMu16BLZZOH5T1ZyrPzBVs0BKP/s+O0xTXx5pJzkFwaC/Dvd9dpPYDC/vz1hpbrHQ/Q/BF2whzlXS0flj10vyZJpGkqXJo09K75CMTZ6EtKrD0wduiTZ3xiDqcLRHbY=
+  - secure: gNlMBGTcdud1Y7tl7nfsIzMAZ+bh7Z7pBMHmcvGOmcQWUSHykLeOKxhQanK2LaCqpc0t42gvkt6IsFScqsDEXjR7eSDCsSXydIDEzDT2y11JJaHQu/+umHYE6zGyhayscmUNId7r7SZv2UkFIx6ioUXFIZ4qxrRxarX2XL0FivY=
+  - secure: YiRpdrhKaTgaHLlN3ivRk7LhUePWmLwvwEIVyt6W/B100h6kheQ1wEMAZBG3XBRQyaFp8wI8ugG/yaMZ2NYQMNmcFEX423DylSQJ+YW64Rtb0aAFzBqReGFdEYOXm6TJ8vPkfEBAWG93h5yTpcu+n9DJv4bnTGAVULKshh+lFHs=
