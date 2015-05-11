@@ -36,8 +36,6 @@ public class PermitInterceptor implements Serializable {
     String[] permissions = permit.value();
     Style style = permit.style();
 
-    boolean permitted = false;
-
     if (identityInstance.isUnsatisfied())
       throw new RuntimeException("PermitInterceptor - Identity bean unavailable");
     if (identityInstance.isAmbiguous())
@@ -45,31 +43,9 @@ public class PermitInterceptor implements Serializable {
     
     Identity identity = identityInstance.get();
     
-    switch (style) {
-      case OR:
-        // For or we break when permit is true
-        for (String permission : permissions) {
-          ContextReference permitContext = getPermitContext(ctx);
-          
-          if (permitted = identity.hasPermission(permission, permitContext))
-            break;
-        }
-      break;
-      
-      case AND:
-        // And is true by default (as long as at least one permission exists) and breaks if permit hits false
-        permitted = permissions.length > 0;
-        
-        for (String permission : permissions) {
-          ContextReference permitContext = getPermitContext(ctx);
-          
-          if (permitted = identity.hasPermission(permission, permitContext))
-            break;
-        }
-      break;
-    }
-   
-    if (permitted)
+    ContextReference permitContext = getPermitContext(ctx);
+    
+    if (PermitUtils.hasPermission(identity, permissions, permitContext, style))
       return ctx.proceed();
     else {
       System.out.println("ACCESS DENIED TO: " + ctx.getMethod().getDeclaringClass().getSimpleName() + "." + ctx.getMethod().getName());
@@ -82,6 +58,7 @@ public class PermitInterceptor implements Serializable {
           throw exceptionClass.newInstance();
       }
     }
+
     return null;
   }
   
