@@ -26,6 +26,13 @@ public @interface RESTPermit {
    */
   @Nonbinding 
   String[] value() default {};
+
+  /**
+   * Set this to true if it is required to be logged in to access the method.
+   * This setting can be interpreted independently of the permissions i.e.
+   * the style attribute may or may not affect this setting.
+   */
+  boolean requireLoggedIn() default false;
   
   /**
    * Style of check, default OR, optionally AND (all defined Permissions must apply)
