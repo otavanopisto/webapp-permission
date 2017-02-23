@@ -35,4 +35,8 @@ public class AbstractPermissionCollection {
       return null;
   }
   
+  protected PermissionFeature[] listPermissionFeatures(Class<?> collectionClass, String permission) throws NoSuchFieldException, SecurityException {
+    return collectionClass.getField(permission).getAnnotationsByType(PermissionFeature.class);
+  }
+  
 }
