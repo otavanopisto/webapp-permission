@@ -1,6 +1,6 @@
 package fi.otavanopisto.security;
 
-import javax.enterprise.util.AnnotationLiteral;
+import jakarta.enterprise.util.AnnotationLiteral;
 
 public class PermissionFeatureLiteral extends AnnotationLiteral<PermissionFeature> implements PermissionFeature {
 

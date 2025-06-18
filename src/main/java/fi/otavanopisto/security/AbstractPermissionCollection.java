@@ -5,7 +5,7 @@ import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AbstractPermissionCollection {
+public abstract class AbstractPermissionCollection {
 
   protected List<String> listPermissions(Class<?> collectionClass) {
     List<String> permissions = new ArrayList<String>();
